@@ -30,32 +30,63 @@ body {
 
 .header {
   padding-left: 1.5rem;
+  padding-top: 1.5rem;
 }
 
 .top-bar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 24px;
-  padding-left: 0;
+  padding-right: 1.5rem;
+  margin-bottom: 4rem;
 }
 
-@media screen and (width>=768px) {
+@media screen and (width >= 768px) {
+  .header {
+    padding-left: 2.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .top-bar {
+    margin-bottom: 3.875rem;
+    padding-right: 2.5rem;
+  }
+
+  .header-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 26.5625rem;
+    overflow: hidden;
+  }
+
   .header-info {
-    width: 339px;
+    width: 21.1875rem;
   }
 }
 
-@media screen and (width>=1024px) {
+@media screen and (width >= 1400px) {
   .header {
     padding-left: 10.3125rem;
+    padding-top: 3.4375rem;
   }
+
   .top-bar {
-    padding: 3.4375rem 10.3125rem;
-    padding-left: 0;
+    padding-right: 10.3125rem;
   }
+
+  .header-content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8.4375rem;
+    height: 15rem;
+    background-color: #607780;
+    border-radius: 1.25rem 0 0 1.25rem;
+  }
+
   .header-info {
-    width: 445px;
+    width: 27.8125rem;
     font-size: 1.125rem;
   }
 }
@@ -69,17 +100,26 @@ body {
   font-size: 3rem;
 }
 
+.title-l {
+  font-size: 2rem;
+}
+
+@media screen and (width >= 1400px) {
+  .title-xl {
+    font-size: 3.5rem;
+  }
+}
+
 .text {
   line-height: 1.625rem;
   color: #7b8bad;
   font-weight: 500;
-  margin-bottom: 2.4375rem;
+  margin-bottom: 2rem;
 }
 
 .header-footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-right: 2.5625rem;
   margin-bottom: 4rem;
 }
@@ -88,18 +128,18 @@ body {
   padding: 0.6875rem 0.8125rem;
   border: none;
   border-radius: 0.5rem;
-  line-height: 1.625rem;
   font-weight: 700;
+  font-family: inherit;
 }
 
 .button-primary {
-  color: #fff;
   background-color: #f16718;
+  color: #fff;
 }
 
 .button-secondary {
-  color: #162542;
   background-color: #e8eff2;
+  color: #162542;
 }
 
 .header-release {
@@ -108,39 +148,119 @@ body {
 }
 
 .image {
-  border-radius: 1.25rem 0 0 1.25rem;
+  border-radius: 1.25rem;
+  /* border-top-left-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem; */
 }
 
 .image-header {
-  width: 21.9375rem;
+  border-radius: 1.25rem 0 0 1.25rem;
 }
 
 @media screen and (width>=768px) {
-  .header-content {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    overflow: hidden;
-    height: 26.5625rem;
-  }
-
   .image-header {
     position: absolute;
     top: 0;
     left: 27.9375rem;
-    width: auto;
     height: 26.5625rem;
   }
 }
 
-@media screen and (width>=1024px) {
-  .header-content {
-    height: 480px;
+@media screen and (width>=1400px) {
+  .image-header {
+    left: 39.6875rem;
+    border-radius: 1.25rem;
+  }
+}
+
+.section {
+  padding-right: 1.5rem;
+}
+
+@media screen and (width>=768px) {
+  .section {
+    padding-left: 1.5rem;
+  }
+}
+
+.section-images {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 4.6875rem;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(241 103 24);
+  mix-blend-mode: multiply;
+  border-radius: 0 1.25rem 1.25rem 0;
+}
+
+.image-section-small {
+  height: 12.0625rem;
+  border-radius: 0 1.25rem 1.25rem 0;
+}
+
+.image-section-big {
+  height: 12.0625rem;
+}
+
+.section-info {
+  text-align: center;
+  padding-inline: 2rem;
+}
+
+@media screen and (width>=768px) {
+  .section {
+    padding-inline: 2.5rem;
   }
 
-  .image-header {
-    left: 35.625rem;
-    height: 480px;
+  .section-images {
+    gap: 1.875rem;
   }
+
+  .image-container::after {
+    border-radius: 1.25rem;
+  }
+
+  .image-section-small {
+    height: 20rem;
+    border-radius: 1.25rem;
+  }
+
+  .image-section-big {
+    height: 20rem;
+  }
+
+  .section-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 5.875rem;
+    text-align: left;
+    align-items: center;
+    padding-inline: 0;
+  }
+
+  .section-text {
+    margin: 0;
+  }
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f16718;
+  width: 4.0625rem;
+  height: 4.0625rem;
+  border-radius: 1rem;
 }

@@ -7,10 +7,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Document</title>
+    <title>Typemaster Landing Page</title>
   </head>
   <body>
-    <header class="header">
+    <!-- <header class="header">
       <div class="top-bar">
         <img src="./assets/shared/logo.svg" alt="logo" />
         <button class="button button-secondary">PRE-ORDER NOW</button>
@@ -23,7 +23,7 @@
           </p>
           <div class="header-footer">
             <button class="button button-primary">PRE-ORDER NOW</button>
-            <span class="header-release">RELEASE ON 5/27</span>
+            <p class="header-release">RELEASE ON 5/27</p>
           </div>
         </div>
         <picture>
@@ -33,6 +33,46 @@
           <img class="image image-header" src="./assets/mobile/image-keyboard.jpg" alt="keyboard image" />
         </picture>
       </div>
-    </header>
+    </header> -->
+    <main class="main">
+      <section class="section">
+        <div class="section-images">
+          <picture class="image-container">
+            <source media="(min-width:1024px)" srcset="./assets/desktop/image-phone-and-keyboard.jpg" />
+            <source media="(min-width:768px)" srcset="./assets/tablet/image-phone-and-keyboard.jpg" />
+            <source media="(min-width:360px)" srcset="./assets/mobile/image-phone-and-keyboard.jpg" />
+
+            <img class="image image-section-small" src="./assets/mobile/image-phone-and-keyboard.jpg" alt="keyboard image" />
+          </picture>
+
+          <picture>
+            <source media="(min-width:1024px)" srcset="./assets/desktop/image-glass-and-keyboard.jpg" />
+            <source media="(min-width:768px)" srcset="./assets/tablet/image-glass-and-keyboard.jpg" />
+            <source media="(min-width:360px)" srcset="./assets/mobile/image-glass-and-keyboard.jpg" />
+            <img class="image image-section-big" src="./assets/mobile/image-glass-and-keyboard.jpg" alt="keyboard image" />
+          </picture>
+        </div>
+        <div class="section-info">
+          <h2 class="title title-l">MECHANICAL WIRELESS KEYBOARD</h2>
+          <p class="text section-text">
+            The Typemaster keyboard boasts top-notch build and practical design. It offers a wide variety of switches and keycaps, along
+            with reliable wireless connectivity.
+          </p>
+        </div>
+      </section>
+      <section class="features">
+        <div class="feature">
+          <div class="icon-container">
+            <img src="./assets/shared/icon-compatible.svg" alt="Projector icon" />
+          </div>
+
+          <h2 class="feature-title">HIGHLY COMPATIBLE</h2>
+          <p class="text">
+            Easy to use and works well with all major computer brands, gaming consoles and mobile devices. Plug & play, no installation or
+            driver needed.
+          </p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
