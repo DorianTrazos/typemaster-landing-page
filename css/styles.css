@@ -31,6 +31,7 @@ body {
 .header {
   padding-left: 1.5rem;
   padding-top: 1.5rem;
+  margin-bottom: 138px;
 }
 
 .top-bar {
@@ -263,4 +264,18 @@ body {
   width: 4.0625rem;
   height: 4.0625rem;
   border-radius: 1rem;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-inline: 1.5rem;
+}
+
+.feature {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
